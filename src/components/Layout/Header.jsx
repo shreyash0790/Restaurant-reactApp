@@ -1,6 +1,7 @@
 import mealsImage from "../../assets/foodimg.jpg";
 import { Fragment } from "react";
 import HeaderCart from "./HeaderCart";
+import Summary from "./AppSummary";
 
 const Header = function () {
   return (
@@ -34,9 +35,13 @@ const Header = function () {
           <HeaderCart />
         </div>
       </div>
-      <div className="relative w-full  overflow-hidden">
-        <img src={mealsImage} alt="Main Image" className="w-full" />
+      <div className="relative overflow-hidden h-72 bg-opacity-10 ">
+      
+        <img src={mealsImage} alt="Main Image" className="w-full opacity-80" />
+      
       </div>
+      <Summary />
+     
     </Fragment>
   );
 };
