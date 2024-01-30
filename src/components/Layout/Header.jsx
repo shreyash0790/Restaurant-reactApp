@@ -1,12 +1,12 @@
 import mealsImage from "../../assets/foodimg.jpg";
 import { Fragment } from "react";
-import HeaderCart from "./HeaderCart";
-import Summary from "./AppSummary";
+import HeaderCart from "../Cart/HeaderCart";
+
 
 const Header = function () {
   return (
     <Fragment>
-      <div className="relative w-full h-30 bg-red-950">
+      <div className="relative w-full h-30 bg-red-950 ">
         <div className="mx-auto flex w-full h-30 items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
           <div className="inline-flex items-center space-x-2">
             <span>
@@ -28,7 +28,7 @@ const Header = function () {
                 ></path>
               </svg>
             </span>
-            <span className=" text-white text-4xl px-5 font-extrabold">
+            <span className=" text-white text-4xl px-5 font-extrabold ">
               HotMeals
             </span>
           </div>
@@ -40,7 +40,7 @@ const Header = function () {
         <img src={mealsImage} alt="Main Image" className="w-full opacity-80" />
       
       </div>
-      <Summary />
+      
      
     </Fragment>
   );
