@@ -36,12 +36,8 @@ const Header = function () {
         </div>
       </div>
       <div className="relative overflow-hidden h-72 bg-opacity-10 ">
-      
         <img src={mealsImage} alt="Main Image" className="w-full opacity-80" />
-      
       </div>
-      
-     
     </Fragment>
   );
 };

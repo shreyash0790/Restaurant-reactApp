@@ -1,6 +1,6 @@
 import sum from "../../assets/sum.svg";
 
-const Summary = function () {
+const MealsSummary = function () {
   return (
     <div className="  absolute  my-20 top-40  ml-20 flex flex-col  items-center text-white text-center ">
       <div className="  shadow-black shadow-lg  p-5 bg-black bg-opacity-70 rounded-lg w-1/2">
@@ -21,4 +21,4 @@ const Summary = function () {
   );
 };
 
-export default Summary;
+export default MealsSummary;

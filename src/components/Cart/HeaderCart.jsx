@@ -2,7 +2,7 @@ const HeaderCart=function(){
 return (
     <button
     type="button"
-    className=" cursor-pointer font-inherit border-none bg-gray-900 bg-opacity-30 text-white px-12 py-3 flex justify-around items-center rounded-full font-bold text-lg transition-all duration-300 ease-in-out hover:bg-primary active:bg-secondary"
+    className=" cursor-pointer font-inherit border-none bg-gray-900 bg-opacity-30 text-white px-6 py-2 flex justify-around items-center rounded-full font-bold text-lg transition-all duration-300 ease-in-out hover:bg-primary active:bg-secondary"
   >
   <svg
   xmlns='http://www.w3.org/2000/svg'

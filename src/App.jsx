@@ -1,6 +1,6 @@
 import Header from "./components/Layout/Header"
-import Summary from "./components/Layout/AppSummary"
-import MealList from "./components/Meals/MealsList"
+import MealsSummary from "./components/Layout/MealsSummary"
+import Meals from "./components/Meals/Meals"
 import { Fragment } from "react"
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
 <Fragment>
 <div className="realtive">
 <Header />
-<Summary />
-<MealList />
+<MealsSummary />
+<Meals />
 </div>
 
 
