@@ -1,3 +1,4 @@
+import Cart from "./components/Cart/Cart"
 import Header from "./components/Layout/Header"
 import MealsSummary from "./components/Layout/MealsSummary"
 import Meals from "./components/Meals/Meals"
@@ -8,11 +9,13 @@ function App() {
 
   return (
 <Fragment>
-<div className="realtive">
+
+<Cart  />
 <Header />
 <MealsSummary />
 <Meals />
-</div>
+
+
 
 
 </Fragment>

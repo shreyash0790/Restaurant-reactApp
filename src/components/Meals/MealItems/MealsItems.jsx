@@ -33,9 +33,9 @@ const Mealitems = function (props) {
          <MealsForm />
           <button
             type="button"
-            className="mt-4 rounded-md bg-red-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            className="mt-4 rounded-lg bg-red-900 px-4 py-1 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
-            Add To Cart
+            + Add
           </button>
         </div>
       </li>
