@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import mealsImage from "../../assets/foodimg.jpg";
 import { Fragment } from "react";
 import HeaderCart from "../Cart/HeaderCart";
 
 
-const Header = function () {
+const Header = function (props) {
   return (
     <Fragment>
       <div className="realtive w-full h-30 bg-red-950">
@@ -32,7 +33,7 @@ const Header = function () {
               HotMeals
             </span>
           </div>
-          <HeaderCart />
+          <HeaderCart onShowCart={props.onShow} />
         </div>
         <div className=" overflow-hidden h-72 bg-opacity-10 ">
           <img
