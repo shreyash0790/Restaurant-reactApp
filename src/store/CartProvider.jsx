@@ -9,8 +9,8 @@ const addItemsHandler = (item) => {
 updatedItems((prevItem)=>[...prevItem,item])
 
   };
-  const removeItemsHandler = () => {
-
+  const removeItemsHandler = (id) => {
+    updatedItems((prevItems) => prevItems.filter((item) => item.id !== id));
 
   };
 

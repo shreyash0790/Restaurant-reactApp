@@ -9,8 +9,9 @@ const Cart = (props) => {
 const cartCtx=useContext(CartContext)
 const cartItems=cartCtx.items
 
-const removeItemHandler=()=>{
-  cartCtx.removeItems()
+const removeItemHandler=(ItemId)=>{
+  
+  cartCtx.removeItems(ItemId)
 }
 
 const totalPrice=cartItems.reduce((curr,item)=>{
@@ -49,7 +50,7 @@ return curr + totalprice
                 <button
       type="button"
       className="rounded-full border bg-orange-800 mt-3 px-2 py-1 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-      onClick={removeItemHandler}
+      onClick={()=>removeItemHandler(items.id)}
     >
       Delete
     </button>
