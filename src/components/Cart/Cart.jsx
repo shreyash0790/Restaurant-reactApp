@@ -1,29 +1,29 @@
 /* eslint-disable react/prop-types */
 import Modal from "../UI/Modal";
-import sushiImage from "../../assets/sushi.png";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
+import CartContext from "../../store/CartContext";
 
-const mealsItems = [
-  {
-    id: 1,
-    name: "Sushi",
-    price: "₹600",
-    originalPrice: "₹1200",
-    imageSrc: sushiImage,
-    quantity: 1,
-  },
-];
+
 
 const Cart = (props) => {
+const cartCtx=useContext(CartContext)
+const cartItems=cartCtx.items
 
+const removeItemHandler=()=>{
+  cartCtx.removeItems()
+}
 
+const totalPrice=cartItems.reduce((curr,item)=>{
+  let totalprice=parseInt((item.price.replace(/[^0-9]+/g, ""))*item.Quantity) 
+return curr + totalprice
+},0)
 
   return (
 <Fragment>
 
   <Modal OnClose={props.OnClose}>
   <ul className="flex flex-col divide-y divide-gray-200">
-    {mealsItems.map((items) => (
+    {cartItems.map((items) => (
       <li
         key={items.id}
         className="flex flex-col py-6 sm:flex-row sm:justify-between"
@@ -40,12 +40,19 @@ const Cart = (props) => {
                 <h3 className="text-2xl font-bold text-black leading-snug sm:pr-8">
                   {items.name}
                 </h3>
-                <p className="text-sm text-black">x{items.quantity}</p>
+                <p className="text-sm text-black">x{items.Quantity}</p>
               </div>
               <div className="text-right">
                 <p className="text-lg font-semibold text-black ">
                   {items.price}
                 </p>
+                <button
+      type="button"
+      className="rounded-full border bg-orange-800 mt-3 px-2 py-1 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+      onClick={removeItemHandler}
+    >
+      Delete
+    </button>
               </div>
             </div>
           </div>
@@ -56,8 +63,8 @@ const Cart = (props) => {
 
   <div className="space-y-1 text-right text-black pb-5">
     <p>
-      Total amount:
-      <span className="font-semibold"> ₹1200</span>
+      Total Price:
+      <span className="font-semibold"> ₹{totalPrice}</span>
     </p>
   </div>
   <div className="flex justify-end space-x-4">

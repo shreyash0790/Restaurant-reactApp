@@ -45,6 +45,7 @@ const MealList = function () {
               {availabeMeals.map((items) => (
                 <Mealitems
                   key={items.id}
+                  id={items.id}
                   name={items.name}
                   imageSrc={items.imageSrc}
                   description={items.description}

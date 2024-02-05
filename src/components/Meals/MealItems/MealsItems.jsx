@@ -1,10 +1,10 @@
-/* eslint-disable react/prop-types */
+
 import MealsForm from "./Mealsform";
 const Mealitems = function (props) {
   return (
     <div>
       <li
-        key={props.id}
+       
         className="flex items-stretch justify-between space-x-5 py-7"
       >
         <div className="flex flex-1 items-stretch">
@@ -30,13 +30,8 @@ const Mealitems = function (props) {
           </div>
         </div>
         <div className="ml-auto flex flex-col items-end justify-between">
-         <MealsForm />
-          <button
-            type="button"
-            className="mt-4 rounded-lg bg-red-900 px-4 py-1 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-          >
-            + Add
-          </button>
+         <MealsForm items={props} id={props.id}/>
+        
         </div>
       </li>
     </div>
