@@ -10,7 +10,6 @@ const cartCtx=useContext(CartContext)
 const cartItems=cartCtx.items
 
 const removeItemHandler=(ItemId)=>{
-  
   cartCtx.removeItems(ItemId)
 }
 

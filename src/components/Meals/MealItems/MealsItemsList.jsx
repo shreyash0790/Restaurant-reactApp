@@ -1,8 +1,8 @@
-import sushiImage from "../../assets/sushi.png";
-import pizzaImage from "../../assets/pizza.png";
-import burgerImage from "../../assets/burger.png";
-import saladImage from "../../assets/salad.png";
-import Mealitems from "./MealItems/MealsItems";
+import sushiImage from "../../../assets/sushi.png";
+import pizzaImage from "../../../assets/pizza.png";
+import burgerImage from "../../../assets/burger.png";
+import saladImage from "../../../assets/salad.png";
+import Mealitems from "./MealsItems";
 
 const availabeMeals = [
   {
@@ -35,7 +35,7 @@ const availabeMeals = [
   },
 ];
 
-const MealList = function () {
+const MealItemsList = function () {
   return (
     <div className="  mx-auto  max-w-4xl mt-44 mb-10 bg-white rounded-xl">
       <div className="overflow-hidden rounded-xl border border-gray-100 shadow">
@@ -60,4 +60,4 @@ const MealList = function () {
   );
 };
 
-export default MealList;
+export default MealItemsList;

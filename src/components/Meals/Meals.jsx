@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import MealList from "./MealsList"
+import MealList from "./MealItems/MealsItemsList"
 
 
 const Meals=function(){
